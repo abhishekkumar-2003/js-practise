@@ -57,3 +57,32 @@ You don’t need to declare the data type of a variable.
 The type is determined at runtime, and a variable's type can change.
 
 */
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/*
+memmory => Stack; heap;
+Stack => Primitive => used copy for changes memory(When asing to another variable)
+heap=> Non-Primitive => used refrence for changes in memory ->
+(When asing to another variable)
+*/
+let myName = "Abhishek";
+let myNickName = myName;
+myNickName="abhi";
+
+console.log(myName);//Abhishek
+console.log(myNickName);//abhi
+//by assining variable to another veriable we make copy of another variale 
+// then assign then such that making change in new variable does not affect old variable 
+// in Primitive 
+let userOne = {
+    user : "Abhishek",
+    email : "abhishek@google.com"
+
+}
+let userTwo = userOne;
+userTwo.email="abhi@google.com";
+console.log(userOne);
+console.log(userTwo);
+
+// here in in non-promotove in when one variable assigned to another in does not copy 
+//it make a refrence to same data so, by changing in new variable will affect the 
+//old variable also
