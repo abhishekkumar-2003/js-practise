@@ -24,3 +24,18 @@ const largeBill = 194397302847;
 // console.log(Math.round(4.5));
 // console.log(Math.abs(-99.65));
 
+//+++++++++++++22/04/2025+++++++++++++++
+console.log(Math.random());
+//gives random values between 0 and 1
+console.log(Math.random()*10);
+//by multiplying 10 we get values between 0 and 10
+console.log((Math.random()*10)+1);
+//by multiplying 10 and adding 1 we get values between 1 and 11
+console.log(Math.floor((Math.random()*10)+1));
+//we get values between 1 and 10 with no decimal value
+
+const min =10;
+const max = 20;
+//to get values between max and min
+console.log(Math.floor(Math.random() *(max-min+1))+min);
+
