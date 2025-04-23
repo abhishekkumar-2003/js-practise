@@ -42,8 +42,24 @@ const objjjj={obj1, obj2};//take a objjjj a diffrent object and placed ob1 & obj
 // console.log(obj3);
 // const obj4={...obj1,...obj2};
 // console.log(obj4);
-console.log(Userjs);
-console.log(Object.keys(Userjs));
-console.log(Object.values(Userjs));
-console.log(Object.entries(Userjs));
-console.log(Userjs.hasOwnProperty('batch'));
+//__________________________________________________
+// console.log(Userjs);
+// console.log(Object.keys(Userjs));//get all the keys in arrays formate
+// console.log(Object.values(Userjs));//similaly get all the values in arrays formate
+// console.log(Object.entries(Userjs));
+// console.log(Userjs.hasOwnProperty('batch'));
+
+
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++23/04/2025-9:47pm++++++++++++++
+const course={
+    courseName : "javaScript by hitesh sir",
+    courseTime: "19 hour",
+    courseDoneBy: "Abhishek Kumar"
+}
+console.log(course.courseDoneBy);
+const {courseDoneBy : student } = course
+console.log(student);
