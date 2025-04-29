@@ -21,11 +21,19 @@ map1.set("Fr", "france");
 map1.set("Is", "isral");
 map1.set("IN", ["India", "Bharat"]);
 
-console.log(map1);
+//console.log(map1);
+for (const key of map1) {
+    //console.log(key);
+    
+}
+for (const [key, value] of map1) {
+    //console.log(key,":-", value);
+    
+}
 
 
 //neither the Map nor the Object contains duplicate values.
-//object side by side comparision
+// //object side by side comparision
 // const Userjs = new Object();//singleton object
 
 // Userjs.id = "21scse1011029";
@@ -34,6 +42,12 @@ console.log(map1);
 // Userjs.batch="2021-2025";
 // Userjs.id= "21scse1011029";
 // console.log(Userjs);
+
+// for (const [key, value] of Userjs) {//does not work for object only work in map
+//     console.log(key,":-", value);  
+// }
+
+
 /*
 | Feature                       | `Map`                       | `Object`                        |
 |-------------------------- |--------------------------------|---------------------------------|
