@@ -48,3 +48,13 @@ if(logedIn && logedByEmail){
     console.log(`logEdIN by Gmail by ${userName}`);
     
 }
+
+let age = 25;
+let isStudent = false;
+let hasID = true;
+
+if ((age > 18 && hasID) || isStudent) {
+  console.log("Allowed entry");
+} else {
+  console.log("Entry denied");
+}
