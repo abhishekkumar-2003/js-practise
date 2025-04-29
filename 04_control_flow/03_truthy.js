@@ -82,3 +82,8 @@ expressionIfTrue: Executed if the condition is true.
 
 expressionIfFalse: Executed if the condition is false.
  */
+// const age = 20;
+// const status = (age >= 18) ? "Adult" : "Minor";
+// console.log(status); // Output: "Adult"
+
+if(true) console.log('one line if loop');
