@@ -1,0 +1,15 @@
+06_dom/one.html
+                      <------DOM----->
+                            window
+                              |
+                           Document
+                              |
+                             HTML
+                          /        \
+                      Head          Body
+                    /     \             \
+                title     meta           Div--------------------->attribute
+                /           \              \                  \
+            text node      attribute        h1                 p
+                                            / \                \            
+                                  attribute    text node        text node
