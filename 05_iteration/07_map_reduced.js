@@ -25,3 +25,36 @@ const myNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 //REDUCED
+const array1= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const newTotal = array1.reduce(function (acc, curr) {
+//     console.log(`acc: ${acc} and curr:${curr}` );
+//     return acc+curr;
+// }, 0);
+const newTotal = array1.reduce( (acc, curr) =>{
+    console.log(`acc: ${acc} and curr:${curr}` );
+    return acc+curr;
+}, 0);
+
+console.log(newTotal);
+
+const shopingCart=[
+    {
+        course:"js",
+        price:2999
+    },
+    {
+        course:"java",
+        price:999
+    },
+    {
+        course:"mobile development",
+        price:5999
+    },
+    {
+        course:"data science",
+        price:11999
+    }
+];
+ const priceToPay=shopingCart.reduce((acc, item)=>acc+item.price, 0);
+ console.log(priceToPay);
+ 
