@@ -13,3 +13,116 @@
             text node      attribute        h1                 p
                                             / \                \            
                                   attribute    text node        text node
+
+
+
+--> dom manupulation example
+
+document.getElementById('title')
+null
+document.getElementById('title1')
+<h1 id=​"title1" class=​"heading">​DOM learning on chai code​</h1>​
+css-generic.js:236 uBOL: Generic cosmetic filtering stopped because no more DOM changes
+document.getElementById('title1').class
+undefined
+document.getElementById('title1').className
+'heading'
+document.getElementById('title1').getAttribute('class')
+'heading'
+const title = document.getElementById('title1')
+undefined
+title.style.background='green'
+'green'
+title1.innerHTML
+'DOM learning on chai code\n            <span style="display: none;">\n                test text \n            </span>\n        '
+title1.innerText
+'DOM learning on chai code'
+title1.te
+undefined
+title1.textContent
+'DOM learning on chai code\n            \n                test text \n            \n        '
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title1.heading, title1: h1#title1.heading]
+
+
+| Property      | Includes HTML Tags | Includes Hidden Text | Parses HTML    | Shows Like Browser |
+|---------------|--------------------|-----------------------|---------------|--------------------|
+| `innerHTML`   | ✅ Yes             | ✅ Yes                 | ✅ Yes        | ❌ No              |
+| `innerText`   | ❌ No              | ❌ No                  | ❌ No         | ✅ Yes             |
+| `textContent` | ❌ No              | ✅ Yes                 | ❌ No         | ❌ No              |
+
+innerHTML
+What it does: Returns or sets the HTML inside an element as a string.
+
+Includes: HTML tags and elements.
+
+Use case: When you want to read or write actual HTML markup.
+
+🟢 innerText
+What it does: Returns the visible text inside the element.
+
+Ignores: Hidden elements (like display: none), extra whitespaces, and tags.
+
+Use case: When you want the readable text that the user sees.
+
+🔵 textContent
+What it does: Returns all text inside the element, including hidden elements.
+
+Includes: All text, regardless of whether it's visible or not, and does not parse HTML.
+
+Use case: When you want everything as plain text, even hidden parts.
+
+
+
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+css-generic.js:236 uBOL: Generic cosmetic filtering stopped because no more DOM changes
+const tempList = document.querySelectorAll('li')
+undefined
+tempList[2].style.color = 'dark red'
+'dark red'
+tempList[2].style.color = 'red'
+'red'
+myH1 = document.querySelectorAll('h1')
+NodeList [h1#title1.heading]
+myH1[0].style.color = 'green'
+'green'
+tempList.forEach((item)=>{
+    item.style.backgroundColor = 'green'
+});
+undefined
+tempList.forEach((item)=>{
+    item.style.backgroundColor = 'yellow'
+});
+undefined
+tempList[1].style.color = 'red'
+'red'
+
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const tempClass = document.getElementsByClassName('list-item')
+undefined
+Arr
+VM244:1 Uncaught ReferenceError: Arr is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM244:1Understand this error
+Array.from(tempClass)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const ConvertedArray = Array.from(tempClass)
+undefined
+ConvertedArray.forEach((item)=>{
+    console.log(item)
+})
+VM472:2 <li class=​"list-item">​…​</li>​
+VM472:2 <li class=​"list-item">​…​</li>​
+VM472:2 <li class=​"list-item">​…​</li>​
+VM472:2 <li class=​"list-item">​…​</li>​
+undefined
+ConvertedArray.forEach((item)=>{
+    item.style.color = 'orange'
+})
+undefined
